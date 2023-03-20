@@ -25,6 +25,8 @@ namespace CMP1124M
                 {
                     case 1:
                         Console.WriteLine("Bubble Sort picked!");
+                        Sort.bubbleSort(Road_1, false);
+                        Console.WriteLine(Road_1[0]);
                         break;
                     case 2:
                         Console.WriteLine("Merge Sort picked");
