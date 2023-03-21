@@ -31,6 +31,7 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
                         }
                     }
                     }
+            // should probably return amount of steps?!!
             return data;
         }
         public static int[] selectionSort(int[] data, bool asc) 
