@@ -15,7 +15,7 @@ namespace CMP1124M
 
             Console.WriteLine("Pick a sort \r\n " +
                                 "1. Bubble Sort \r\n " +
-                                "2. Merge Sort");
+                                "2. Selection Sort");
             int userInput = Convert.ToInt32(Console.ReadLine());
 
 
@@ -26,10 +26,10 @@ namespace CMP1124M
                     case 1:
                         Console.WriteLine("Bubble Sort picked!");
                         Sort.bubbleSort(Road_1, false);
-                        Console.WriteLine(Road_1[0]);
                         break;
                     case 2:
-                        Console.WriteLine("Merge Sort picked");
+                        Console.WriteLine("Selection Sort picked");
+                        Sort.selectionSort(Road_1, false);
                         break;
                 }
 
