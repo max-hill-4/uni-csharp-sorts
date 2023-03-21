@@ -16,6 +16,11 @@ namespace CMP1124M
 
             // This should iterate through a object list! 
             // Object could hold filename and array ? 
+
+            //Sort
+            // Search
+            // 10 values
+            //
             Console.WriteLine("Select Array \r\n " +
                                 "1. \r\n " +
                                 "2. \r\n " +
@@ -24,7 +29,8 @@ namespace CMP1124M
 
             Console.WriteLine("Pick a sort \r\n " +
                                 "1. Bubble Sort \r\n " +
-                                "2. Selection Sort");
+                                "2. Selection Sort \r\n " +
+                                "3. Insertion Sort");
             int userInput = Convert.ToInt32(Console.ReadLine());
 
 
@@ -39,6 +45,10 @@ namespace CMP1124M
                     case 2:
                         Console.WriteLine("Selection Sort picked");
                         Sort.selectionSort(Road_1, false);
+                        break;
+                    case 3:
+                        Console.WriteLine("Insertion Sort picked");
+                        Sort.insertionSort(Road_1, false);
                         break;
                 }
 

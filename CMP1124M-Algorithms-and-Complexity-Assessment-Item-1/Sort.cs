@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,26 +16,27 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
             for (int i = 0; i < length - 1; i++)
                 // Prev elements for 'i' are correct
                 for (int j = 0; j < length - i - 1; j++)
-                    
+
                     // There must be a nicer way to do this!
-                    if (asc){
+                    if (asc)
+                    {
 
                         if (data[j] > data[j + 1])
                         {
                             (data[j], data[j + 1]) = (data[j + 1], data[j]);
                         }
-                    else
-                    { 
-                        if (data[j] < data[j + 1])
+                        else
                         {
-                            (data[j], data[j + 1]) = (data[j + 1], data[j]);
+                            if (data[j] < data[j + 1])
+                            {
+                                (data[j], data[j + 1]) = (data[j + 1], data[j]);
+                            }
                         }
-                    }
                     }
             // should probably return amount of steps?!!
             return data;
         }
-        public static int[] selectionSort(int[] data, bool asc) 
+        public static int[] selectionSort(int[] data, bool asc)
         {
             int length = data.Length;
 
@@ -67,5 +69,20 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
             return data;
         }
 
+        public static int[] insertionSort(int[] data, bool asc)
+        {
+            int length = data.Length;
+            for (int i = 0; i < length - 1; i++)
+            {
+                int x = i;
+                while ((x > 0) && data[x-1] > data[x]) {
+                    (data[x], data[x-1]) = (data[x-1], data[x]);
+                    x--;
+                }
+
+            }
+            return data;
+
+        }
     }
 }
