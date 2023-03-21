@@ -9,34 +9,30 @@ namespace CMP1124M
         static void Main(string[] args)
         {
             // could i store the roads as objects and use a design pattern?
+            // optimise by using params keyword? store as 2d list ?? 
             int[] Road_1 = Data.readFile("Road_1_256.txt");
             int[] Road_2 = Data.readFile("Road_2_256.txt");
             int[] Road_3 = Data.readFile("Road_3_256.txt");
 
 
-            // This should iterate through a object list! 
-            // Object could hold filename and array ? 
-
-            //Sort
-            // Search
-            // 10 values
-            //
             Console.WriteLine("Select Array \r\n " +
-                                "1. \r\n " +
-                                "2. \r\n " +
-                                "3. ");
-
+                                "1. Road_1_256 \r\n " +
+                                "2. Road_2_256\r\n " +
+                                "3. Road_3_256");
+            
+            int arrayInput = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Pick a sort \r\n " +
                                 "1. Bubble Sort \r\n " +
                                 "2. Selection Sort \r\n " +
                                 "3. Insertion Sort");
-            int userInput = Convert.ToInt32(Console.ReadLine());
+            
+            int sortInput = Convert.ToInt32(Console.ReadLine());
 
 
             try
             {
-                switch (userInput)
+                switch (sortInput)
                 {
                     case 1:
                         Console.WriteLine("Bubble Sort picked!");
