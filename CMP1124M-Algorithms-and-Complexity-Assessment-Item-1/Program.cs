@@ -8,14 +8,7 @@ namespace CMP1124M
     {
         static void Main(string[] args)
         {
-            // could i store the roads as objects and use a design pattern?
-            // optimise by using params keyword? store as 2d list ?? 
-            
-
-            
             Menu menu = new Menu();
-            
-            //Data.outputIncrement(Road_1, 10);
         }
         
 

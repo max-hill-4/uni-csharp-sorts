@@ -13,6 +13,17 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
         public static int[] Road_2 = readFile("Road_2_256.txt");
         public static int[] Road_3 = readFile("Road_3_256.txt");
 
+        public static int[] pickArray(int array)
+        {
+            switch (array)
+            {
+                case 1: return Road_1;
+                case 2: return Road_2;
+                case 3: return Road_3;
+            }
+            // If an array is not picked, Road 1 will be picked by defualt.
+            return Road_1;
+        }
         public static void outputIncrement(int[] data,int x)
         {
             int length = data.Length;
