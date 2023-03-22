@@ -12,7 +12,6 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
 
         public Sort(int[] Road, int sortInput, bool asc)
         {
-            Console.WriteLine("Sort instainted");
             switch (sortInput)
             {
                   case 1:

@@ -16,10 +16,11 @@ namespace CMP1124M
 
             
             Menu menu = new Menu();
-            Console.WriteLine("Menu sortinput is: ");
-            Console.WriteLine(menu.sortInput);
             Sort sort = new Sort(Road_1, menu.sortInput, menu.ascInput);
-            
+            foreach (int i in Search.linearSearch(Road_1, 5))
+            {
+                Console.WriteLine(i);
+            }
             //Data.outputIncrement(Road_1, 10);
         }
         
