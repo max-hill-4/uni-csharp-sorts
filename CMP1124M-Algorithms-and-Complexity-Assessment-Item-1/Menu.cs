@@ -18,7 +18,10 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
                 Console.WriteLine("Select an Array to use \r\n " +
                                     "1. Road_1_256 \r\n " +
                                     "2. Road_2_256\r\n " +
-                                    "3. Road_3_256");
+                                    "3. Road_3_256\r\n\r\n " +
+                                    "4. Road_1_2048\r\n " +
+                                    "5. Road_2_2048\r\n " +
+                                    "6. Road_3_2048");
 
 
                 int arrayInput = Convert.ToInt32(Console.ReadLine());
@@ -27,7 +30,9 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
                                     "1. Sort \r\n " +
                                     "2. Search\r\n " +
                                     "3. Output increments of n\r\n " +
-                                    "4. Quit");
+                                    "4. Merge\r\n " +
+                                    "5. Quit");
+                
                 int menu = Convert.ToInt32(Console.ReadLine());
 
                 switch (menu)
@@ -42,6 +47,9 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
                         menuOutput();
                         break;
                     case 4:
+                        menuMerge();
+                        break;
+                    case 5:
                         System.Environment.Exit(0);
                         break;
                 }
@@ -96,13 +104,28 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
 
         private void menuOutput() 
         {
-            Console.WriteLine("Pick an increment \r\n " +
-                            "1. 10 \r\n " +
-                            "2. 50 \r\n ");
+            Console.WriteLine("Pick an increment");
 
             int sortInput = Convert.ToInt32(Console.ReadLine());
-
+            Console.WriteLine("Values:\r\n");
             Data.outputIncrement(array, sortInput);
+        }
+
+        private void menuMerge()
+        {
+            Console.WriteLine("Select an Array to merge with \r\n " +
+                                    "1. Road_1_256 \r\n " +
+                                    "2. Road_2_256\r\n " +
+                                    "3. Road_3_256\r\n\r\n " +
+                                    "4. Road_1_2048\r\n " +
+                                    "5. Road_2_2048\r\n " +
+                                    "6. Road_3_2048");
+
+
+            int arrayInput = Convert.ToInt32(Console.ReadLine());
+            array = array.Concat(Data.pickArray(arrayInput)).ToArray();
+            menuOutput();
+
         }
     }
 }

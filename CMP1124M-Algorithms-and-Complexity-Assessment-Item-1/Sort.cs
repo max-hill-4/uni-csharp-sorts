@@ -9,7 +9,6 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
 {
     class Sort
     {
-
         public Sort(int[] Road, int sortInput, bool asc)
         {
             switch (sortInput)
@@ -29,7 +28,6 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
             }
 
         }
-
         public static int[] bubbleSort(int[] data, bool asc)
         {
             int length = data.Length;

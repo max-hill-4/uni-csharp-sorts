@@ -10,8 +10,6 @@ namespace CMP1124M
         {
             Menu menu = new Menu();
         }
-        
-
 
     }
 
