@@ -36,23 +36,29 @@ namespace CMP1124M
                 {
                     case 1:
                         Console.WriteLine("Bubble Sort picked!");
-                        Sort.bubbleSort(Road_1, false);
+                        Sort.bubbleSort(Road_1, true);
+
+                        
                         break;
                     case 2:
                         Console.WriteLine("Selection Sort picked");
-                        Sort.selectionSort(Road_1, false);
+                        Sort.selectionSort(Road_1, true);
+
                         break;
                     case 3:
                         Console.WriteLine("Insertion Sort picked");
-                        Sort.insertionSort(Road_1, false);
+                        Sort.insertionSort(Road_1, true);
                         break;
                 }
-
+                
+                
             }
             catch
             {
                 Console.WriteLine("Invalid Input");
             }
+
+            Data.outputIncrement(Road_1, 10);
         }
         
 
