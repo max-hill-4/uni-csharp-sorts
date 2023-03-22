@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//I should probably have pick array as a serperate fcuntion!!!! in menu pick so
+//thati can have merge work cleaner! fix TD::
+
 namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
 {
     class Menu
