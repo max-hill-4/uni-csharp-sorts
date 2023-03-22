@@ -9,7 +9,9 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
 
     class Data
     {
-
+        public static int[] Road_1 = readFile("Road_1_256.txt");
+        public static int[] Road_2 = readFile("Road_2_256.txt");
+        public static int[] Road_3 = readFile("Road_3_256.txt");
 
         public static void outputIncrement(int[] data,int x)
         {

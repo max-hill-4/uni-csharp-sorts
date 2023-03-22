@@ -8,11 +8,7 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
 {
     class Menu
     {
-        public int arrayInput;
-        public int sortInput;
-        public bool ascInput;
-        public int searchInput;
-        public int menu;
+
         public Menu()
         {
             try
@@ -24,55 +20,67 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
                                     "2. Road_2_256\r\n " +
                                     "3. Road_3_256");
 
-                arrayInput = Convert.ToInt32(Console.ReadLine());
+                int arrayInput = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("Choose functionality \r\n " +
                                     "1. Sort \r\n " +
                                     "2. Search\r\n " +
                                     "3. Output increments of n");
-                menu = Convert.ToInt32(Console.ReadLine());
+                int menu = Convert.ToInt32(Console.ReadLine());
 
-                switch(menu)
+                switch (menu)
                 {
                     case 1:
-                        Console.WriteLine("Pick a sort \r\n " +
-                                    "1. Bubble Sort \r\n " +
-                                    "2. Selection Sort \r\n " +
-                                    "3. Insertion Sort");
-
-                        sortInput = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Ascending or Decending \r\n " +
-                                    "1. Ascending Sort \r\n " +
-                                    "2. Decending Sort \r\n ");
-
-                        ascInput = (Console.ReadLine() == "1");
+                        menuSort();
                         break;
-                    
-                    case 2:
-                        Console.WriteLine("Pick a search \r\n " +
-                                    "1. Linear \r\n " +
-                                    "2. Binary \r\n ");
 
-                        searchInput = Convert.ToInt32(Console.ReadLine());
+                    case 2:
+                        menuSearch();
                         break;
 
                 }
 
-                
-
-                
-                
-
-                
-            
             }
             catch
             {
                 Console.WriteLine("Somethings gone wrong. Try Again.");
                 new Menu();
             }
-            
-
         }
+        private void menuSort()
+        {
+            Console.WriteLine("Pick a sort \r\n " +
+            "1. Bubble Sort \r\n " +
+            "2. Selection Sort \r\n " +
+            "3. Insertion Sort");
+
+            int sortInput = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ascending or Decending \r\n " +
+                        "1. Ascending Sort \r\n " +
+                        "2. Decending Sort \r\n ");
+
+            bool ascInput = (Console.ReadLine() == "1");
+            Sort sort = new Sort(Data.Road_1, sortInput, ascInput);
+        }
+
+        private void menuSearch()
+        {
+            Console.WriteLine("Pick a search \r\n " +
+                                   "1. Linear \r\n " +
+                                   "2. Binary \r\n ");
+
+            int searchtypeInput = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("For what Value \r\n ");
+
+            int searchInput = Convert.ToInt32(Console.ReadLine());
+            
+            foreach (int i in Search.linearSearch(Data.Road_1, searchInput))
+            {
+                Console.WriteLine("Found at index: " + i);
+            }
+        }
+
     }
 }
+
