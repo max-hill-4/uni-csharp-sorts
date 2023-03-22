@@ -10,6 +10,28 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
     class Sort
     {
 
+        public Sort(int[] Road, int sortInput, bool asc)
+        {
+            Console.WriteLine("Sort instainted");
+            switch (sortInput)
+            {
+                  case 1:
+                        Console.WriteLine("Bubble Sort picked!");
+                        bubbleSort(Road, asc);
+                        break;
+                    case 2:
+                        Console.WriteLine("Selection Sort picked");
+                        selectionSort(Road, asc);
+                        break;
+                    case 3:
+                        Console.WriteLine("Insertion Sort picked");
+                        insertionSort(Road, asc);
+                        break;
+            }
+
+
+        }
+
         public static int[] bubbleSort(int[] data, bool asc)
         {
             int length = data.Length;
