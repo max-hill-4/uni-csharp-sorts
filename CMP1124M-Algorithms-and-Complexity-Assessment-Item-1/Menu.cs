@@ -80,11 +80,18 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
             Console.WriteLine("For what Value \r\n ");
 
             int searchInput = Convert.ToInt32(Console.ReadLine());
-            
-            foreach (int i in Search.linearSearch(array, searchInput))
+            List<int> results = Search.linearSearch(array, searchInput);
+            if (results != null)
             {
-                Console.WriteLine("Found at index: " + i);
+                Console.WriteLine("Value not found, Found closest Integer \r\n ");
+                results = Search.findClosest(array, searchInput);
             }
+      
+            foreach (int i in results)
+            {
+                Console.WriteLine("Found Integer "+ array[i] + " at index: " + i);
+            }
+            
         }
 
         private void menuOutput() 

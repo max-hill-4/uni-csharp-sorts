@@ -60,5 +60,22 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
             }
             return locations;
         }
+
+        public static List<int> findClosest(int[] data, int x) 
+        {
+            int closest = int.MaxValue;
+            foreach (int i in data)
+            {
+                int difference = Math.Abs(i - x);
+                int closestDifference = Math.Abs(closest - x);
+                if (difference < closestDifference)
+                {
+                    closest = i;
+                }
+            }
+
+            return linearSearch(data, closest);
+
+        }
     }
 }

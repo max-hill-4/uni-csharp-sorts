@@ -28,7 +28,6 @@ namespace CMP1124M_Algorithms_and_Complexity_Assessment_Item_1
                         break;
             }
 
-
         }
 
         public static int[] bubbleSort(int[] data, bool asc)
